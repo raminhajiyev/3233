@@ -26,12 +26,7 @@ pr:
       - 'packaging/*'
       - 'documentation/*'
 
-parameters:
-- name: testList
-  displayName: Test List
-  default: all
-
 jobs:
-- job: SmokeTests
-  steps:
-  - script: echo "Running Smoke Tests"
+  - job: TestBranchFilter
+    steps:
+      - script: echo "Testing branch and path filters"
